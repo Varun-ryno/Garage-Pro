@@ -206,8 +206,8 @@ public $widgetPathFull;
         if (!empty($this->allVariation) && count($this->allVariation) > 1) {
             $args["page_templates"]["subpage"]["banner"]["variation"] = sanitize_text_field($settings["variation"]);
         }
-        $args["page_templates"]["subpage"]["banner"]["heading"] = $settings["heading"];
-        $args["page_templates"]["subpage"]["banner"]["subheading"] = $settings["subheading"];
+        $args["page_templates"]["subpage"]["banner"]["heading"] = sanitize_text_field($settings["heading"]);
+        $args["page_templates"]["subpage"]["banner"]["subheading"] = sanitize_text_field($settings["subheading"]);
         $args["page_templates"]["subpage"]["banner"]["button_text"] = sanitize_text_field($settings["button_text"]);
         $args["page_templates"]["subpage"]["banner"]["button_link"] = sanitize_text_field($settings["button_link"]);
         // SAVE TO SPEC

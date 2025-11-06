@@ -208,12 +208,6 @@ public $widgetPathFull;
                 "variation!" => ["b"],
             ],
         ]);
-        $this->add_control('content', [
-            'label' => 'Content',
-            'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => 'telephone-class',
-            
-        ]);
         $this->add_control('button_link', [
             'label' => 'Button Link',
             'type' => \Elementor\Controls_Manager::TEXT,
@@ -267,7 +261,6 @@ public $widgetPathFull;
         $args['globals']['in_content_cta']['target'] = sanitize_text_field($settings['target']) ? true : false;
         $args['globals']['in_content_cta']['phone'] = sanitize_text_field($settings['phone']);
         $args['globals']['in_content_cta']['button_link'] = sanitize_text_field($settings['button_link']);
-        $args['globals']['in_content_cta']['content'] = $settings['content'];
         $args['globals']['in_content_cta']['button_text'] = $settings['button_text'];
         $args['globals']['in_content_cta']['id'] = sanitize_text_field($settings['cta_id']);
 

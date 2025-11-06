@@ -202,10 +202,10 @@ class RDS_Subpagesidebar_Widget extends Widget_Base
         $args["page_templates"]["subpage"]["sidebar"]["banner"]["heading"] = sanitize_text_field($settings["heading"]);
 
         if (!empty($this->allVariation) && count($this->allVariation) > 1) {
-            $args["page_templates"]["subpage"]["sidebar"]["banner"]["variation"] = $settings["variation"];
+            $args["page_templates"]["subpage"]["sidebar"]["banner"]["variation"] = sanitize_text_field($settings["variation"]);
         }
       
-        $args["page_templates"]["subpage"]["sidebar"]["banner"]["subheading"] = $settings["subheading"];
+        $args["page_templates"]["subpage"]["sidebar"]["banner"]["subheading"] = sanitize_text_field($settings["subheading"]);
         $args["page_templates"]["subpage"]["sidebar"]["banner"]["button_text"] = sanitize_text_field($settings["button_text"]);
         $args["page_templates"]["subpage"]["sidebar"]["banner"]["button_link"] = sanitize_text_field($settings["button_link"]);
         // SAVE TO SPEC

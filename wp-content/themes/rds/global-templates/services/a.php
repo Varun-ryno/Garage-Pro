@@ -22,34 +22,35 @@
                     $class = 'h-lg-309';
                 }
                 foreach ($servicesItems as $value) {
-    echo '<div class="col-lg h-lg-250 ' . $class . '">
-        <a href="' . get_home_url() . $value['link'] . '" 
-           class="d-block shadow-sm ' . $args['globals']['services']['top_border_class'] . ' no_hover_underline px-lg-3 h-100 service_block border-md-6 pt-lg-0">
-            <div class="d-flex d-lg-block align-items-center text-lg-center py-lg-2 px-lg-0 px-4 py-1">
-                <div class="w-100 d-lg-block d-flex align-items-center py-lg-5">
-                    <div class="col-lg-12 col-2">';
-
-    // If image exists show it, else show icon
-    if ( !empty($value['image_link']) ) {
-        $alt = !empty($value['title']) ? esc_attr($value['title']) : '';
-        echo '<img src="' . esc_url($value['image_link']) . '" alt="' . $alt . '" class="img-fluid service_block_img" />';
-    } else {
-        echo '<i class="' . esc_attr($value['icon']) . ' color_primary text_70 line_height_70 sm_text_30 sm_line_height_60 service_block_icon"></i>';
-    }
-
-    echo '          </div>
+                    echo '<div class="col-lg h-lg-250 ' .
+                        $class .
+                        '">
+                    <a href="' .
+                        get_home_url() .
+                        $value['link'] .
+                        '" class="d-block shadow-sm ' .
+                        $args['globals']['services']['top_border_class'] .
+                        ' no_hover_underline px-lg-3 h-100 service_block border-md-6  pt-lg-0">
+                    <div class="d-flex d-lg-block align-items-center text-lg-center py-lg-2 px-lg-0 px-4 py-1">
+                    <div class="w-100 d-lg-block d-flex align-items-center  py-lg-5">
+                    <div class="col-lg-12 col-2">
+                    <i class="' .
+                        $value['icon'] .
+                        ' color_primary text_70 line_height_70 sm_text_30 sm_line_height_60 service_block_icon"></i>
+                    </div>
                     <div class="col-lg-12 col-8">
-                        <h6 class="h7 mb-lg-2 mb-0 mt-lg-4 pt-lg-1">' . esc_html($value['title']) . '</h6>
+                    <h6 class="h7 mb-lg-2 mb-0 mt-lg-4 pt-lg-1">' .
+                        $value['title'] .
+                        '</h6>
                     </div>
                     <div class="col-lg-12 col-2 text-end">
-                        <i class="true_black icon-chevron-right4 sm_text_20 sm_line_height_60 d-lg-none d-inline-block"></i>
+                    <i class="true_black icon-chevron-right4 sm_text_20 sm_line_height_60 d-lg-none d-inline-block"></i>
                     </div>
-                </div>
-            </div>
-        </a>
-    </div>';
-}
-
+                    </div>
+                    </div>
+                    </a>
+                    </div>';
+                }
                 ?>  
             </div>
         </div>
@@ -81,36 +82,35 @@
                         $class = 'h-lg-309';
                     }
                     foreach ($servicesItems as $value) {
-    echo '<div class="swiper-slide shadow-sm max-lg-255 ' .
-            $args['globals']['services']['top_border_class'] . ' ' . $class . '">
-        <a href="' . get_home_url() . $value['link'] . '" 
-           class="d-block no_hover_underline px-lg-3 h-100 service_block">
-            <div class="d-flex d-lg-block align-items-center text-lg-center py-lg-2 px-lg-0 px-4 py-1">
-                <div class="w-100 d-lg-block d-flex align-items-center py-lg-5">
-                    <div class="col-lg-12 col-2">';
-    
-    //  Image if available, otherwise fallback to icon
-    if ( !empty($value['image_link']) ) {
-        // use title as fallback alt
-        $alt = !empty($value['title']) ? esc_attr($value['title']) : '';
-        echo '<img src="' . esc_url($value['image_link']) . '" alt="' . $alt . '" class="img-fluid service_block_img" />';
-    } else {
-        echo '<i class="' . esc_attr($value['icon']) . ' color_primary text_70 line_height_70 sm_text_30 sm_line_height_60 service_block_icon"></i>';
-    }
-
-    echo '          </div>
+                        echo '<div class="swiper-slide shadow-sm max-lg-255  ' .
+                            $args['globals']['services']['top_border_class'] .
+                            ' ' .
+                            $class .
+                            '">
+                    <a href="' .
+                            get_home_url() .
+                            $value['link'] .
+                            '" class="d-block no_hover_underline px-lg-3 h-100 service_block">
+                    <div class="d-flex d-lg-block align-items-center text-lg-center py-lg-2 px-lg-0 px-4 py-1">
+                    <div class="w-100 d-lg-block d-flex align-items-center  py-lg-5">
+                    <div class="col-lg-12 col-2">
+                    <i class="' .
+                            $value['icon'] .
+                            ' color_primary text_70 line_height_70 sm_text_30 sm_line_height_60 service_block_icon"></i>
+                    </div>
                     <div class="col-lg-12 col-8">
-                        <h6 class="h7 mb-lg-2 mb-0 mt-lg-4 pt-lg-1">' . esc_html($value['title']) . '</h6>
+                    <h6 class="h7 mb-lg-2 mb-0 mt-lg-4 pt-lg-1 ">' .
+                            $value['title'] .
+                            '</h6>
                     </div>
                     <div class="col-lg-12 col-2 text-end">
-                        <i class="true_black icon-chevron-right4 sm_text_20 sm_line_height_60 d-lg-none d-inline-block"></i>
+                    <i class="true_black icon-chevron-right4 sm_text_20 sm_line_height_60 d-lg-none d-inline-block"></i>
                     </div>
-                </div>
-            </div>
-        </a>
-    </div>';
-}
-
+                    </div>
+                    </div>
+                    </a>
+                    </div>';
+                    }
                     ?> 
                 </div>
             </div>
